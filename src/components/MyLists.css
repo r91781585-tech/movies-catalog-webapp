@@ -1,0 +1,262 @@
+.my-lists-container {
+  padding: 2rem 0;
+  min-height: 80vh;
+}
+
+.my-lists-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.my-lists-header h1 {
+  margin: 0;
+  color: #333;
+}
+
+.my-lists-content {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 2rem;
+  min-height: 500px;
+}
+
+.lists-sidebar {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.lists-sidebar h3 {
+  margin: 0 0 1rem 0;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.lists-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.list-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.8rem;
+  border: 1px solid #e9ecef;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+  width: 100%;
+}
+
+.list-menu-item:hover {
+  background-color: #f8f9fa;
+  border-color: #007bff;
+}
+
+.list-menu-item.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.list-name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.default-badge {
+  color: #ffc107;
+  font-size: 0.9rem;
+}
+
+.list-menu-item.active .default-badge {
+  color: #fff3cd;
+}
+
+.no-lists {
+  text-align: center;
+  padding: 2rem 0;
+  color: #666;
+}
+
+.list-content {
+  background: white;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.list-header {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+}
+
+.list-header h2 {
+  margin: 0 0 0.5rem 0;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.default-indicator {
+  color: #ffc107;
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+.list-count {
+  margin: 0;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.list-movie-card {
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-movie-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.list-movie-card .movie-poster {
+  height: 250px;
+  overflow: hidden;
+}
+
+.list-movie-card .movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.list-movie-card .movie-info {
+  padding: 1rem;
+}
+
+.list-movie-card .movie-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.list-movie-card .movie-year,
+.list-movie-card .movie-type,
+.list-movie-card .movie-rating,
+.list-movie-card .added-date {
+  margin: 0.3rem 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.list-movie-card .movie-rating {
+  color: #f39c12;
+  font-weight: 500;
+}
+
+.empty-list {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.empty-list h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.empty-list p {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.no-list-selected {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #666;
+}
+
+.no-list-selected h3 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.auth-required {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-required h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.auth-required a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.auth-required a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .my-lists-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .my-lists-content {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .lists-sidebar {
+    order: 2;
+  }
+  
+  .list-content {
+    order: 1;
+  }
+  
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  .list-movie-card .movie-poster {
+    height: 200px;
+  }
+}
